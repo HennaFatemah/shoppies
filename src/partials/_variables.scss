@@ -1,0 +1,41 @@
+// <<<<< BREAKPOINTS VARIABLES >>>>> \\
+
+$mobile-breakpoint: 320px;
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1080px;
+
+// <<<<< FONT SIZE MAP >>>>> \\
+
+$size: (
+    "mob-page-header": 3.2rem,
+    "desktop-page-header": 4.8rem,
+    "start-nominate": 1.6rem,
+    "nav-bar": 1.7rem,
+    "section-header":2.8rem,
+    "card-title":1.4rem,
+    "card-year": 1.2rem,
+    "card-nominate": 1.2rem,
+    "card-pop-title":2.4rem,
+    "card-pop-details-heading": 1.6rem,
+    "card-pop-details": 1.2rem,
+    "nominated-title":1rem
+);
+
+// <<<<< FONT COLOR MAP >>>>> \\
+
+$color-primary: (
+    "global-text": #DAA520,
+    "card-text": #A57E1D,
+    "global-white": #fff
+);
+
+$color-secondary: (
+    "nav-border": #DAA520,
+    "nav-border-shadow": #DAA52059
+);
+
+$color-background: (
+    "card-bg": #F4E6CF,
+    "counter-bg": #DAA520,
+    "card-pop-bg": #DAA520
+);
