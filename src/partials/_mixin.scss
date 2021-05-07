@@ -29,3 +29,10 @@
     font-family: 'shopify';
     color: map-get($color-primary, global-text);
 }
+
+@mixin nominate-size {
+    @media (max-width: 336px) {
+        padding: 1rem;
+        width: fit-content;
+    }
+}

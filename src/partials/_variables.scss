@@ -7,18 +7,18 @@ $desktop-breakpoint: 1080px;
 // <<<<< FONT SIZE MAP >>>>> \\
 
 $size: (
-    "mob-page-header": 3.2rem,
-    "desktop-page-header": 4.8rem,
-    "start-nominate": 1.6rem,
-    "nav-bar": 1.7rem,
-    "section-header":2.8rem,
-    "card-title":1.4rem,
-    "card-year": 1.2rem,
-    "card-nominate": 1.2rem,
-    "card-pop-title":2.4rem,
-    "card-pop-details-heading": 1.6rem,
+    "mob-page-header": 2rem,
+    "desktop-page-header": 3rem,
+    "start-nominate": 1rem,
+    "nav-bar": 1.0625rem,
+    "section-header":1.75rem,
+    "card-title":0.875rem,
+    "card-year": 0.0125rem,
+    "card-nominate": 0.75rem,
+    "card-pop-title":1.5rem,
+    "card-pop-details-heading": 1rem,
     "card-pop-details": 1.2rem,
-    "nominated-title":1rem
+    "nominated-title":0.75rem
 );
 
 // <<<<< FONT COLOR MAP >>>>> \\
@@ -31,11 +31,15 @@ $color-primary: (
 
 $color-secondary: (
     "nav-border": #DAA520,
-    "nav-border-shadow": #DAA52059
+    "nav-border-shadow": #DAA52059,
+    "nominate-shadow": #DAA52026
 );
 
 $color-background: (
+    "nav-bg": #fff,
+    "hero-bg": #5f6361,
     "card-bg": #F4E6CF,
     "counter-bg": #DAA520,
-    "card-pop-bg": #DAA520
+    "card-pop-bg": #DAA520,
+    "nominate-bg": #DAA520
 );
