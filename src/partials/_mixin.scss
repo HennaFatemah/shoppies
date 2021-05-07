@@ -1,0 +1,31 @@
+// <<<<<<<< IMPORTS >>>>>>>> \\
+
+@import './variables';
+@import './typography';
+
+// <<<<<<<< MEDIA-QUERY BREAKPOINTS >>>>>>>> \\
+
+@mixin mobile {
+    min-width: $mobile-breakpoint;
+}
+@mixin tablet {
+    @media (min-width: $tablet-breakpoint) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: $desktop-breakpoint) {
+        @content;
+    }
+}
+
+// <<<<<<<< CSS RESET >>>>>>>> \\
+
+@mixin normal {
+    box-sizing: border-box;
+    *, *:before, *:after {box-sizing: inherit}
+    margin: 0;
+    padding: 0;
+    font-family: 'shopify';
+    color: map-get($color-primary, global-text);
+}
