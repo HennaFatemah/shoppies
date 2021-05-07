@@ -22,11 +22,17 @@
 // <<<<<<<< CSS RESET >>>>>>>> \\
 
 @mixin normal {
-    font-size: 62.5%;
     box-sizing: border-box;
     *, *:before, *:after {box-sizing: inherit}
     margin: 0;
     padding: 0;
     font-family: 'shopify';
     color: map-get($color-primary, global-text);
+}
+
+@mixin nominate-size {
+    @media (max-width: 336px) {
+        padding: 1rem;
+        width: fit-content;
+    }
 }

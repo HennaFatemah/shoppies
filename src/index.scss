@@ -1,5 +1,5 @@
 @import './partials/mixin';
 
-html{
+body, #root{
     @include normal;
 }

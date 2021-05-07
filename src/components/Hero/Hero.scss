@@ -1,0 +1,73 @@
+@import '../../partials/mixin';
+
+.hero-grid{
+    background-color: map-get($color-background, hero-bg);
+    display: grid;
+    grid-template-areas: "head" "main";
+    grid-template-rows: 10% 90%;
+    grid-template-columns: 1fr;
+    height: 100vh;
+    &__head{
+        grid-area: "head";
+        background-color: map-get($color-background, nav-bg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__logo{
+        padding: 2rem 0 1rem 0;
+        width: 10rem;
+    }
+    &__main{
+        grid-area: "main";
+        @include tablet{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    &__content{
+        margin: 15vh 5% 25vh 5%;
+    }
+    &__main-title{
+        font-size: map-get($size, mob-page-header);
+        @include desktop {
+            font-size: map-get($size, desktop-page-header);
+        }
+    }
+    &__start-nominate{
+        height: 3.25rem;
+        @include nominate-size;
+        width: 18.75rem;
+        @include desktop{
+            width: 20rem;
+        }
+        font-size: map-get($size, start-nominate);
+        box-shadow: 0 5px 15px 0 map-get($color-secondary, nominate-shadow);
+        background-color: map-get($color-background, nominate-bg);
+        border: 1px transparent;
+        border-radius: 6px;
+        color: map-get($color-primary, global-white);
+    }
+    &__hero{
+        width: 100vw;
+        margin: 1rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: map-get($color-primary, global-white);
+        @include tablet{
+            width: 50vw;
+            height: 80vh;
+            margin: 0;
+        }
+    }
+    &__hero-pic{
+        width: 60vw;
+        @include tablet{
+            width: 40vw;
+            height: 40vw;
+        }
+    }
+}
