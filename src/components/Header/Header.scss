@@ -1,0 +1,17 @@
+@import '../../partials/mixin';
+
+.head{
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    height: 10vh;
+    width: 100vw;
+    background-color: map-get($color-background, nav-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__logo{
+        padding: 2rem 0 0.5rem 0;
+        width: 15rem;
+    }
+}

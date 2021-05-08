@@ -5,7 +5,6 @@ class Main extends Component {
     render() {
         return (
             <div className="main">
-                {this.props.selectMain}
                 Main
             </div>
         );

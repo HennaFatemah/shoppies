@@ -1,23 +1,15 @@
 @import '../../partials/mixin';
 
 .hero-grid{
+    position: absolute;
+    top: 0;
     background-color: map-get($color-background, hero-bg);
     display: grid;
-    grid-template-areas: "head" "main" "foot";
-    grid-template-rows: 10vh 80vh 110vh;
+    grid-template-areas: "main" "foot";
+    grid-template-rows: 90vh 10vh;
     grid-template-columns: 1fr;
-    height: 200vh;
-    &__head{
-        grid-area: "head";
-        background-color: map-get($color-background, nav-bg);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    &__logo{
-        padding: 2rem 0 0.5rem 0;
-        width: 15rem;
-    }
+    height: 100vh;
+    width: 100vw;
     &__main{
         grid-area: "main";
         @include tablet{
