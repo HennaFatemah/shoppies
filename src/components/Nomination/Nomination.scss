@@ -1,0 +1,54 @@
+.nomination{
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    &__header{
+        border-bottom: 1px solid rgba(218, 165, 32, 0.315);
+        color: goldenrod;
+        font-size: 1.3em;
+    }
+    &__nominated-movies{
+        border-left: 2px solid rgba(218, 165, 32, 0.315);
+        padding: 0;
+        //margin: -30;
+        padding-left: 3rem;
+        width: 100%;
+        list-style-type: none;
+        animation: slide 0.5s linear;
+    }
+    &__nominated-pic{
+        width: 5rem;
+    }
+    &__nominated-list{
+        display: flex;
+    }
+    &__nominated-content{
+        padding: 0.5rem;
+    }
+    &__nominated-title{
+        padding: 0.5rem;
+        flex: 1;
+    }
+    &__remove-btn{
+        height: 20%;
+        padding: 1rem;
+        border: 0.1rem #c0c0c0 solid;
+        border-radius: 3px;
+        background-color: rgb(252, 212, 110);
+        cursor: pointer;
+        outline: none;
+        &:hover{
+            border: 0.1rem #80c0c0 solid;
+        }
+    }
+}
+@keyframes slide {
+    0%{
+        display: none;
+        margin-left: -30rem;
+    }
+    100% {
+        display: block;
+        margin-left: 0; 
+    }
+}
