@@ -22,6 +22,26 @@ class Main extends Component {
         })
     }
 
+    sortMovies = (event) => {
+        const sort = event.target.value;
+        this.setState({
+            sort: sort,
+            movies: this.state.movies.slice().sort((a, b) =>
+                sort === "lowest" 
+                ? a.Year > b.Year
+                    ? 1 
+                    : -1:
+                sort === "highest" 
+                ? a.Year < b.Year
+                    ? 1 
+                    : -1
+                : a.Title < b.Title
+                    ? 1 
+                    : -1
+            )
+        })
+    }
+
     render() {
         return (
             <div className="main-grid">
