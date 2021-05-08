@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Movies from '../Movies/Movies';
+import Navigation from '../Navigation/Navigation';
 import './Main.scss'
 class Main extends Component {
     constructor(){
@@ -21,10 +22,35 @@ class Main extends Component {
         })
     }
 
+    sortMovies = (event) => {
+        const sort = event.target.value;
+        this.setState({
+            sort: sort,
+            movies: this.state.movies.slice().sort((a, b) =>
+                sort === "lowest" 
+                ? a.Year > b.Year
+                    ? 1 
+                    : -1:
+                sort === "highest" 
+                ? a.Year < b.Year
+                    ? 1 
+                    : -1
+                : a.Title < b.Title
+                    ? 1 
+                    : -1
+            )
+        })
+    }
+
     render() {
         return (
             <div className="main-grid">
                 <div className="main-grid__bar">
+                    <Navigation
+                        count={this.state.movies.length}
+                        sort={this.state.sort}
+                        sortMovies={this.sortMovies}
+                    />
                     <div className="main-grid__search">
                         <input 
                             type="search"

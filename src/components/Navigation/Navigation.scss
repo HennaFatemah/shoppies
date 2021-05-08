@@ -1,0 +1,63 @@
+@import '../../partials/mixin';
+
+.results{
+    background-color: #daa52029;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    padding: 0.5rem 0;
+    margin: 0;
+    font-size: map-get($size, nav-bar);
+    font-weight: bold;
+    color: goldenrod;
+    &__left{
+        display: flex;
+        width: 25vw;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 4%;
+    }
+    &__logo{
+        width: 30px;
+        object-fit: contain;
+    }
+    &__banner{
+        width: 100vw;
+        padding: 2rem 0;
+        border: goldenrod 1px solid;
+        margin: 0 0 2rem 0;
+        display: flex;
+        justify-content: center;
+    }
+    &__sort{
+        display: flex;
+        align-items: center;
+        margin-right: 3%;
+    }
+    &__sort-tag{
+        margin: 0 1rem;
+    }
+    &__count{
+        height: fit-content;
+    }
+}
+select {
+    appearance: none;
+    background-color: transparent;
+    border: 1px solid map-get($color-secondary, nav-border);
+    border-radius: 99em;
+    padding: 0;
+    margin: 0;
+    width: 6rem;
+    height: 2rem;
+    padding: 0 0.5em;
+    outline: none;
+    color: map-get($color-primary, global-text);
+    font-size: map-get($size, nav-bar);
+    background-color: transparent;
+    background-image: url('../../assets/images/down-arrow.svg');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 1.5rem;
+    //cursor: pointer;
+}
