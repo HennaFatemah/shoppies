@@ -1,23 +1,16 @@
 @import '../../partials/mixin';
 
 .hero-grid{
+    position: absolute;
+    top: 0;
     background-color: map-get($color-background, hero-bg);
     display: grid;
-    grid-template-areas: "head" "main" "foot";
-    grid-template-rows: 10% 80% 10%;
+    grid-template-areas: "main" "foot";
+    grid-template-rows: 90vh 10vh;
     grid-template-columns: 1fr;
     height: 100vh;
-    &__head{
-        grid-area: "head";
-        background-color: map-get($color-background, nav-bg);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    &__logo{
-        padding: 2rem 0 0.5rem 0;
-        width: 15rem;
-    }
+    width: 100vw;
+    animation: appearance 2s linear;
     &__main{
         grid-area: "main";
         @include tablet{
@@ -40,6 +33,7 @@
         height: 3.25rem;
         @include nominate-size;
         width: 18.75rem;
+        outline: none;
         @include desktop{
             width: 20rem;
         }
@@ -49,6 +43,9 @@
         border: 1px transparent;
         border-radius: 6px;
         color: map-get($color-primary, global-white);
+        &:hover{
+            opacity: 90%;
+        }
     }
     &__hero{
         width: 100vw;
@@ -73,5 +70,16 @@
     }
     &__foot{
         background-color: map-get($color-primary, global-white);
+    }
+}
+
+@keyframes appearance {
+    0%{
+        opacity: 0;
+        transform: translateX(-100vw);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
     }
 }

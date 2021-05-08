@@ -1,24 +1,23 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './Hero.scss';
-import Shoppies from '../../assets/images/shoppies-logo.svg';
 import HeroMain from '../../assets/images/hero.png';
 
-const Hero = () => {
-    return (
-        <div className="hero-grid">
-            <div className="hero-grid__head">
-                <img className="hero-grid__logo" src={Shoppies} alt="logo"/>
-            </div>
-            <div className="hero-grid__main">
-                <div className="hero-grid__content">
-                    <h1 className="hero-grid__main-title">The Shoppies: Movie<br/>Awards For<br/>Entrepreneurs</h1>
-                    <button className="hero-grid__start-nominate">Start Nomination</button>
+class Hero extends Component {
+    render() {
+        return (
+            <div className="hero-grid">
+                <div className="hero-grid__main">
+                    <div className="hero-grid__content">
+                        <h1 className="hero-grid__main-title">The Shoppies: Movie<br/>Awards For<br/>Entrepreneurs</h1>
+                        <Link  to='/nomination' className="hero-grid__start-nominate">Start Nomination</Link>
+                    </div>
+                    <img className="hero-grid__hero-pic" src={HeroMain} alt="background" />
                 </div>
-                <img className="hero-grid__hero-pic" src={HeroMain} alt="background" />
+                <div className="hero-grid__foot"></div>
             </div>
-            <div className="hero-grid__foot"></div>
-        </div>
-    );
-};
+        );
+    }
+}
 
 export default Hero;
