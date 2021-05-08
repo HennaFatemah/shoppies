@@ -4,9 +4,9 @@
     background-color: map-get($color-background, hero-bg);
     display: grid;
     grid-template-areas: "head" "main" "foot";
-    grid-template-rows: 10% 80% 10%;
+    grid-template-rows: 10vh 80vh 110vh;
     grid-template-columns: 1fr;
-    height: 100vh;
+    height: 200vh;
     &__head{
         grid-area: "head";
         background-color: map-get($color-background, nav-bg);
@@ -40,6 +40,7 @@
         height: 3.25rem;
         @include nominate-size;
         width: 18.75rem;
+        outline: none;
         @include desktop{
             width: 20rem;
         }
@@ -49,6 +50,9 @@
         border: 1px transparent;
         border-radius: 6px;
         color: map-get($color-primary, global-white);
+        &:hover{
+            opacity: 90%;
+        }
     }
     &__hero{
         width: 100vw;
