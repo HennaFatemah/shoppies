@@ -1,0 +1,101 @@
+@import '../../partials/mixin';
+
+.movies{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    &__list{
+        flex: 1 1 10rem;
+        height: 30rem;
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__connect{
+        text-decoration: none;
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__card{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 18rem;
+        height: 100%;
+        background-color: #f4e6cf;
+        box-shadow: 4px 4px 4px map-get($color-secondary, card-shadow);
+        align-items: center;
+        padding: 2rem;
+        border-radius: 7px;
+        transition: linear 0.5s;
+        &:hover{
+            transform: scale(1.1);
+            box-shadow: none;
+        }
+    }
+    &__pic-container{
+        width: 15rem;
+        height: 18rem;
+        background-color: map-get($color-background, card-pic-bg);
+        border-radius: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0.5rem;
+    }
+    &__pic{
+        max-width: 13rem;
+        max-height: 16rem;
+        border-radius: 6px;
+        object-fit: cover;
+    }
+    &__title{
+        //height: 2em;
+        font-size: map-get($size, card-title);
+        line-height: 1.1;
+        margin: 0 0.5em;
+        text-align: center;
+        color: map-get($color-primary, card-text);
+        text-decoration: none;
+        letter-spacing: .1em;
+    }
+    &__year{
+        font-size: map-get($size, card-year);
+    }
+    &__nominate{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    &__nominate-btn{
+        padding: 1rem;
+        color: map-get($color-primary, global-text);
+        border: 1px solid map-get($color-secondary, nav-border);
+        background-color: transparent;
+        border-radius: 3px;
+        cursor: pointer;
+        outline: none;
+        &:hover{
+            color: map-get($color-primary, global-white);
+            border: 1px solid map-get($color-secondary, nominate-shadow);
+            background-color: map-get($color-background, nominate-bg);
+        }
+    }
+    &__disable-nominate-btn{
+        padding: 1rem;
+        border: 0.1rem #c0c0c0 solid;
+        border-radius: 3px;
+        background-color: rgb(252, 212, 110);
+        cursor: pointer;
+        outline: none;
+        opacity: 0.3;
+    }
+}

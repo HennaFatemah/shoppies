@@ -13,8 +13,8 @@ $size: (
     "nav-bar": 1.0625rem,
     "section-header":1.5rem,
     "section-count":1rem,
-    "card-title":0.875rem,
-    "card-year": 0.0125rem,
+    "card-title":1.2rem,
+    "card-year": 1rem,
     "card-nominate": 0.75rem,
     "card-pop-title":1.5rem,
     "card-pop-details-heading": 1rem,
@@ -33,13 +33,14 @@ $color-primary: (
 $color-secondary: (
     "nav-border": #DAA520,
     "nav-border-shadow": #DAA52059,
-    "nominate-shadow": #DAA52026
+    "nominate-shadow": #DAA52026,
+    "card-shadow": #BEA26f42
 );
 
 $color-background: (
     "nav-bg": #fff,
     "hero-bg": #5f6361,
-    "hero-pic-bg": #ffffffc4,
+    "card-pic-bg": #ffffff4f,
     "card-bg": #F4E6CF,
     "counter-bg": #DAA520,
     "card-pop-bg": #DAA520,

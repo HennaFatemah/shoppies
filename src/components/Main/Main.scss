@@ -2,16 +2,14 @@
 
 .main-grid{
     position: absolute;
-    top: 10vh;
-    height: 90vh;
+    top: 13vh;
     animation: appear 2s ease-in-out;
     display: flex;
     flex-direction: column;
-    height: fit-content;
     &__bar{
         position: sticky;
         z-index: 20;
-        top: 10vh;
+        top: 13vh;
         border-bottom: solid 1px map-get($color-secondary, nav-border);
         box-shadow: 0 3px 6px map-get($color-secondary, nav-border-shadow);
         background-color: white;
@@ -24,12 +22,12 @@
         background-image: url('../../assets/images/search.svg');
         background-repeat: no-repeat;
         background-position: right;
-        background-size: 2rem;
+        background-size: 3rem;
         outline: none;
         width: 30vw;
-        height: 5em;
+        height: 4em;
         margin-top: 0;
-        margin-bottom: -3em;
+        margin-bottom: -4em;
         z-index: 7;
         border: map-get($color-secondary, nav-border) solid 1px;
         border-radius: 99em;
@@ -42,6 +40,35 @@
             font-size: map-get($size, nav-bar);
         }
     }
+    &__search-bar[type="search"].dark {
+        //background: #222;
+        //color: #fff;
+      }
+      
+      &__search-bar[type="search"].light {
+        //background: #fff;
+        //color: #222;
+      }
+      
+      &__search-bar[type="search"]::-webkit-search-cancel-button {
+        // -webkit-appearance: none;
+        // height: 1em;
+        // width: 1em;
+        // border-radius: 50em;
+        // background: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg) no-repeat 50% 50%;
+        // background-size: contain;
+        // opacity: 0;
+        // pointer-events: none;
+      }
+      
+      &__search-bar[type="search"]:focus::-webkit-search-cancel-button {
+        opacity: 0;
+        //pointer-events: all;
+      }
+      
+    //   &__search-bar[type="search"].dark::-webkit-search-cancel-button {
+    //     filter: invert(1);
+    //   }
     &__center{
         display: flex;
         justify-content: space-between;
@@ -52,17 +79,18 @@
         padding: 0;
     }
     &__movies{
-        flex: 3 30rem;
+        flex: 3 50rem;
         min-height: 80vh;
         display: flex;
-        padding: 5%;
+        flex-direction: column;
+        padding: 3%;
     }
     &__nominations{
         flex: 1 10rem;
         display: flex;
         flex-direction: column;
         min-height: 80vh;
-        padding: 5%;
+        padding: 3%;
     }
     &__title{
         color: goldenrod;
