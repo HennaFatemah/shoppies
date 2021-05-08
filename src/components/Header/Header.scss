@@ -1,6 +1,8 @@
 @import '../../partials/mixin';
+@import '../../partials/typography';
 
 .head{
+    font-family: 'myriad';
     position: fixed;
     top: 0;
     z-index: 10;
@@ -11,6 +13,7 @@
     justify-content: center;
     align-items: center;
     &__logo{
+        font-family: 'myriad';
         padding: 1rem 0 0.5rem 0;
         width: 15rem;
     }
