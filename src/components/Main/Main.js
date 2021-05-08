@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Movies from '../Movies/Movies';
+import Navigation from '../Navigation/Navigation';
 import './Main.scss'
 class Main extends Component {
     constructor(){
@@ -25,6 +26,11 @@ class Main extends Component {
         return (
             <div className="main-grid">
                 <div className="main-grid__bar">
+                    <Navigation
+                        count={this.state.movies.length}
+                        sort={this.state.sort}
+                        sortMovies={this.sortMovies}
+                    />
                     <div className="main-grid__search">
                         <input 
                             type="search"
