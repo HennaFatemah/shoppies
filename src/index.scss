@@ -2,4 +2,9 @@
 
 body, #root{
     @include normal;
+    background-image: url('./assets/images/main-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 15vh;
+    width: 100vw;
 }

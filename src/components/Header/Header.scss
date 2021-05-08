@@ -1,17 +1,20 @@
 @import '../../partials/mixin';
+@import '../../partials/typography';
 
 .head{
+    font-family: 'myriad';
     position: fixed;
     top: 0;
     z-index: 10;
-    height: 10vh;
+    height: 13vh;
     width: 100vw;
     background-color: map-get($color-background, nav-bg);
     display: flex;
     justify-content: center;
     align-items: center;
     &__logo{
-        padding: 2rem 0 0.5rem 0;
+        font-family: 'myriad';
+        padding: 1rem 0 0.5rem 0;
         width: 15rem;
     }
 }
