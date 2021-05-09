@@ -4,7 +4,7 @@ import Poster from '../../assets/images/poster.jpeg';
 
 class Movies extends Component {
     render() {
-        const {movies} = this.props;
+        const { movies } = this.props;
         return (
             <>
                 <ul className="movies">
@@ -20,7 +20,9 @@ class Movies extends Component {
                                     </div>
                                     <div className="movies__nominate">
                                         <p className="movies__year">Year: {movie.Year}</p>
-                                        <button className="movies__nominate-btn">
+                                        <button className="movies__nominate-btn" 
+                                            onClick={() => this.props.addToNomination(movie)}
+                                            disabled={this.props.disableNomination.find(eachMovie => eachMovie.imdbID === movie.imdbID)}>
                                             Nominate
                                         </button>
                                     </div>

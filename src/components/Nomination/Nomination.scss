@@ -1,0 +1,72 @@
+@import '../../partials/mixin';
+
+.nomination{
+    padding: 1rem;
+    margin: 0.5rem;
+    display: flex;
+    &__header{
+        border-bottom: 1px solid rgba(218, 165, 32, 0.315);
+        color: goldenrod;
+        font-size: 1.3em;
+    }
+    &__nominated-movies{
+        padding: 0;
+        padding-left: 1rem;
+        width: 100%;
+        list-style-type: none;
+        animation: slide 0.5s linear;
+    }
+    &__nominated-pic{
+        max-width: 4.5rem;
+        max-height: 8rem;
+        border-radius: 6px;
+        object-fit: cover;
+    }
+    &__nominated-list{
+        display: flex;
+        border-left: 2px solid rgba(218, 165, 32, 0.315);
+        border-bottom: 2px solid rgba(218, 165, 32, 0.315);
+        margin: 0.5rem;
+    }
+    &__nominated-content{
+        width: 5rem;
+        height: 9rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: map-get($color-background, card-bg);
+        border-radius: 3px;
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
+    &__nominated-title{
+        flex: 1;
+        margin: 1rem 0.5rem;
+        font-size: map-get($size, nominated-title);
+    }
+    &__remove-btn{
+        margin: 0 0.5rem;
+        padding: 1rem;
+        color: map-get($color-primary, global-text);
+        border: 1px solid map-get($color-secondary, nav-border);
+        background-color: transparent;
+        border-radius: 3px;
+        cursor: pointer;
+        outline: none;
+        &:hover{
+            color: map-get($color-primary, global-white);
+            border: 1px solid map-get($color-secondary, nominate-shadow);
+            background-color: map-get($color-background, nominate-bg);
+        }
+    }
+}
+@keyframes slide {
+    0%{
+        display: none;
+        margin-left: -30rem;
+    }
+    100% {
+        display: block;
+        margin-left: 0; 
+    }
+}
