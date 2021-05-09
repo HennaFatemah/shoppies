@@ -3,37 +3,37 @@
     height: 100%;
     top: 0;
     left: 0;
-    z-index: 10;
+    z-index: 30;
     &__overlay {
         position: relative;
         display: flex;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
         top: 0;
         left: 0;
         width: 100vw;
         min-height: 100%;
-        background-color: rgba($color: #000000, $alpha: 0.5);
+        background-color: rgba($color: #000000, $alpha: 0.1);
     }
     &__content{
         background-image: url('../../assets/images/main-bg.png');
         background-position-y: top;
         background-repeat: no-repeat;
         background-size: cover;
-        position: relative;
-        //width: 90%;
-        height: 90vh;
         background-color: white;
-        //box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.34);
+        position: relative;
+        height: 70vh;
+        width: 50vw;
         border-radius: 10px;
         padding: 2rem;
-        margin: 2rem 0;
-        //margin-top: -6rem;
         z-index: 7;
+        display: flex;
     }
     &__details{
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: rgba(255, 255, 255, 0.418);
     }
     &__close{
         position: absolute;
@@ -62,15 +62,16 @@
         display: flex;
     }
     &__video--media{
-        height: 10vh;
+        height: 90%;
     }
     &__instructions{
-        font-size: 13px;
+        font-size: 20px;
         font-weight: bold;
-        text-align: center;
+        text-align: left;
         color: #323648;
-        padding: 0.1rem;
-        padding-left: 3rem;
+        margin: 0;
+        // padding: 0.1rem;
+        // padding-left: 3rem;
     }
     &__intro{
         width:80vw;

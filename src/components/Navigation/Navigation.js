@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 import './Navigation.scss';
 import Logo from '../../assets/images/shoppies-logo-small.svg';
+import Share from '../Share/Share';
 
 class Navigation extends Component {
     render() {
         return (
             <>
-            {this.props.nominatedMovies.length === 5 ? <div className="results__banner">You have reached 5 nominations</div>: null}
+            {this.props.nominatedMovies.length === 5 ? <div className="results__banner">You have reached 5 nominations
+            <Share
+                share={this.props.nominatedMovies.map(titles => titles.Title.toString())}
+            />
+            </div>: null}
             <div className="results">
                 <div className="results__left">
                     <img  className="results__logo" src={Logo} alt="logo"/>

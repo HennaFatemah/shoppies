@@ -35,8 +35,6 @@ class Movies extends Component {
         fetch(`http://www.omdbapi.com/?apikey=874163ff&i=${currMovie.imdbID}`)
         .then(response => response.json())
         .then(movieSpecifics => {
-            console.log(movieSpecifics);
-            console.log(movieSpecifics.Poster);
             this.setState({ movie: movieSpecifics })
         })
     }
