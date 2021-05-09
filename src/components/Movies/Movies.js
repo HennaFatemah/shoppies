@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Movies.scss';
 import Poster from '../../assets/images/poster.jpeg';
+import Share from '../Share/Share';
 
 class Movies extends Component {
     constructor(){
@@ -38,6 +39,7 @@ class Movies extends Component {
                     {movies.map((movie, i) => {
                         return(
                             <li key={i} className="movies__list">
+                                <Share/>
                                 <div className="movies__card"  onMouseOver={() => this.handleMovieSelect(movie.imdbID)} onMouseLeave={this.onMovieClose}>
                                     <div className="movies__connect">
                                         <div className="movies__pic-container">
