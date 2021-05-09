@@ -23,7 +23,7 @@ class Movies extends Component {
         this.setState({
             selectedMovie: currMovie
         });
-        fetch(`http://www.omdbapi.com/?apikey=874163ff&i=${currMovie.imdbID}`)
+        fetch(`https://www.omdbapi.com/?apikey=874163ff&i=${currMovie.imdbID}`)
         .then(response => response.json())
         .then(movieSpecifics => {
             this.setState({ movie: movieSpecifics })

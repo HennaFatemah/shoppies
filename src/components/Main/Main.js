@@ -46,7 +46,7 @@ class Main extends Component {
 
     onSearchChange = (e) => {
         this.setState({ searchField: e.target.value })
-        fetch(`http://www.omdbapi.com/?apikey=874163ff&s=${this.state.searchField}`)
+        fetch(`https://www.omdbapi.com/?apikey=874163ff&s=${this.state.searchField}`)
         .then(response => response.json())
         .then(searchedMovies => {
             console.log(searchedMovies);
