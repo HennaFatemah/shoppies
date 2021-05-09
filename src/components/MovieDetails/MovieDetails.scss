@@ -22,12 +22,13 @@
         background-size: cover;
         background-color: white;
         position: relative;
-        height: 70vh;
-        width: 50vw;
+        height: 90vh;
+        width: 90vw;
         border-radius: 10px;
         padding: 2rem;
         z-index: 7;
         display: flex;
+        align-items: center;
     }
     &__details{
         display: flex;
@@ -42,6 +43,7 @@
         top: 1rem;
         right: 1rem;
         cursor: pointer;
+        color: goldenrod;
         font-size: 1.5rem;
         &:active{
             outline: none;
@@ -62,28 +64,35 @@
         display: flex;
     }
     &__video--media{
-        height: 90%;
+        height: 80%;
+        margin: 2%;
+        border: 6px solid goldenrod;
+        border-radius: 6px;
     }
     &__instructions{
         font-size: 20px;
-        font-weight: bold;
+        font-weight: lighter;
         text-align: left;
-        color: #323648;
-        margin: 0;
+        color: goldenrod;
+        margin: 0.3rem;
+        line-height: 2.2rem;
+        letter-spacing: 0.1rem;
         // padding: 0.1rem;
         // padding-left: 3rem;
     }
     &__intro{
-        width:80vw;
+        border: 2px solid goldenrod;
+        border-radius: 6px;
+        background-color: rgb(245, 232, 199);
     }
     &__subtitle{
         text-transform: capitalize;
         letter-spacing: 0.4rem;
         font-weight: 600;
-        font-size: 17px;
+        font-size: 25px;
         line-height: 1.5em;
         text-align: center;
-        color: #323648;
+        color: goldenrod;
         padding: 0.1rem;
         margin: 0.3rem 0;
     }

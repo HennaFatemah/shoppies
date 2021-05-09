@@ -58,12 +58,12 @@
     }
     &__title{
         font-size: map-get($size, card-title);
-        line-height: 1.1;
+        line-height: -0.2px;
         margin: 0 0.5em;
         text-align: center;
         color: map-get($color-primary, card-text);
         text-decoration: none;
-        letter-spacing: .1em;
+        letter-spacing: -1px;
     }
     &__year{
         font-size: map-get($size, card-year);
@@ -76,16 +76,16 @@
     }
     &__nominate-btn{
         padding: 1rem;
-        color: map-get($color-primary, global-text);
-        border: 1px solid map-get($color-secondary, nav-border);
-        background-color: transparent;
+        color: map-get($color-primary, global-white);
+        border: 1px solid map-get($color-secondary, nominate-shadow);
+        background-color: map-get($color-background, nominate-bg);
         border-radius: 3px;
         cursor: pointer;
         outline: none;
         &:hover{
-            color: map-get($color-primary, global-white);
-            border: 1px solid map-get($color-secondary, nominate-shadow);
-            background-color: map-get($color-background, nominate-bg);
+            color: map-get($color-primary, global-text);
+            border: 1px solid map-get($color-secondary, nav-border);
+            background-color: transparent;
         }
         &:disabled{
             color: map-get($color-primary, global-white);
@@ -115,5 +115,6 @@
         outline: none;
         background: none;
         color: goldenrod;
+        margin-top: 0.2rem;
     }
 }

@@ -14,7 +14,6 @@
         padding-left: 1rem;
         width: 100%;
         list-style-type: none;
-        animation: slide 0.5s linear;
     }
     &__nominated-pic{
         max-width: 4.5rem;
@@ -27,6 +26,7 @@
         border-left: 2px solid rgba(218, 165, 32, 0.315);
         border-bottom: 2px solid rgba(218, 165, 32, 0.315);
         margin: 0.5rem;
+        animation: slide 0.5s linear;
     }
     &__nominated-content{
         width: 5rem;

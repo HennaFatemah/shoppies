@@ -7,9 +7,6 @@ class Nomination extends Component {
         const {nominatedMovies} = this.props;
         return (
             <>
-                <div className="nomination">
-                    {/* {nominatedMovies.length === 0 ? <div>No Nominations</div>: <div className="nomination__header">You have {nominatedMovies.length} Nominations</div>} */}
-                </div>
                 <div>
                     <ul className="nomination__nominated-movies">
                         {nominatedMovies.map((movie, i) => {
