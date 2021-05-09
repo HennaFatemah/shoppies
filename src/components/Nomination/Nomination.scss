@@ -1,6 +1,8 @@
+@import '../../partials/mixin';
+
 .nomination{
     padding: 1rem;
-    margin: 1rem;
+    margin: 0.5rem;
     display: flex;
     &__header{
         border-bottom: 1px solid rgba(218, 165, 32, 0.315);
@@ -8,37 +10,53 @@
         font-size: 1.3em;
     }
     &__nominated-movies{
-        border-left: 2px solid rgba(218, 165, 32, 0.315);
         padding: 0;
-        //margin: -30;
-        padding-left: 3rem;
+        padding-left: 1rem;
         width: 100%;
         list-style-type: none;
         animation: slide 0.5s linear;
     }
     &__nominated-pic{
-        width: 5rem;
+        max-width: 4.5rem;
+        max-height: 8rem;
+        border-radius: 6px;
+        object-fit: cover;
     }
     &__nominated-list{
         display: flex;
+        border-left: 2px solid rgba(218, 165, 32, 0.315);
+        border-bottom: 2px solid rgba(218, 165, 32, 0.315);
+        margin: 0.5rem;
     }
     &__nominated-content{
+        width: 5rem;
+        height: 9rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: map-get($color-background, card-bg);
+        border-radius: 3px;
+        margin: 0.5rem;
         padding: 0.5rem;
     }
     &__nominated-title{
-        padding: 0.5rem;
         flex: 1;
+        margin: 1rem 0.5rem;
+        font-size: map-get($size, nominated-title);
     }
     &__remove-btn{
-        height: 20%;
+        margin: 0 0.5rem;
         padding: 1rem;
-        border: 0.1rem #c0c0c0 solid;
+        color: map-get($color-primary, global-text);
+        border: 1px solid map-get($color-secondary, nav-border);
+        background-color: transparent;
         border-radius: 3px;
-        background-color: rgb(252, 212, 110);
         cursor: pointer;
         outline: none;
         &:hover{
-            border: 0.1rem #80c0c0 solid;
+            color: map-get($color-primary, global-white);
+            border: 1px solid map-get($color-secondary, nominate-shadow);
+            background-color: map-get($color-background, nominate-bg);
         }
     }
 }
