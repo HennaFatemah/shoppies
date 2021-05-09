@@ -1,8 +1,34 @@
 import React, { Component } from 'react';
 import './Movies.scss';
 import Poster from '../../assets/images/poster.jpeg';
+import MovieDetails from '../MovieDetails/MovieDetails'
 
 class Movies extends Component {
+    constructor(){
+        super()
+        this.state = {
+            selectedMovie: null,
+            movie:{},
+        }
+    }
+
+    handleMovieClose = () => {
+        this.setState({
+            selectedMovie: null
+        })
+    }
+
+    handleMovieSelect = (id) => {
+        const currMovie = this.props.movies.find(movie => movie.imdbID === id);
+        this.setState({
+            selectedMovie: currMovie
+        });
+        fetch(`http://www.omdbapi.com/?apikey=874163ff&i=${currMovie.imdbID}`)
+        .then(response => response.json())
+        .then(movieSpecifics => {
+            this.setState({ movie: movieSpecifics })
+        })
+    }
     render() {
         const { movies } = this.props;
         return (
@@ -26,6 +52,11 @@ class Movies extends Component {
                                             Nominate
                                         </button>
                                     </div>
+                                    <button className="movies__more-details"  onClick={() => this.handleMovieSelect(movie.imdbID)}> ... More Details ...</button>
+                                    {this.state.selectedMovie && <MovieDetails
+                                        movie={this.state.movie}
+                                        onMovieClose={this.handleMovieClose}
+                                    />}
                                 </div>
                             </li>
                         )

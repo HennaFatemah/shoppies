@@ -1,0 +1,16 @@
+.clip{
+    &__tag{
+        width: 2rem;
+        height: 2rem;
+        background-image:url('../../assets/images/clipboard.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: goldenrod;
+        border-radius: .2rem;
+        padding: 0.1rem;
+        margin-top: -0.1rem;
+    }
+    &__small{
+        color: black;
+    }
+}

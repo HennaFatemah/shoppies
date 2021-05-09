@@ -17,17 +17,23 @@
         align-items: center;
         margin-left: 4%;
     }
-    &__logo{
-        width: 30px;
-        object-fit: contain;
-    }
     &__banner{
         width: 100vw;
         padding: 2rem 0;
         border: goldenrod 1px solid;
-        margin: 0 0 2rem 0;
+        margin: 0;
         display: flex;
         justify-content: center;
+    }
+    &__logo{
+        width: 30px;
+        object-fit: contain;
+    }
+    &__right{
+        display: flex;
+        align-items: center;
+        width: 30vw;
+        justify-content: space-between;
     }
     &__sort{
         display: flex;

@@ -87,6 +87,12 @@
             border: 1px solid map-get($color-secondary, nominate-shadow);
             background-color: map-get($color-background, nominate-bg);
         }
+        &:disabled{
+            color: map-get($color-primary, global-white);
+            border: 1px solid map-get($color-secondary, nominate-shadow);
+            background-color: map-get($color-background, nominate-bg);
+            opacity: .5;
+        }
     }
     &__disable-nominate-btn{
         padding: 1rem;
@@ -96,5 +102,18 @@
         cursor: pointer;
         outline: none;
         opacity: 0.3;
+    }
+    &__share{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        z-index: 30;
+    }
+    &__more-details{
+        border: none;
+        outline: none;
+        background: none;
+        color: goldenrod;
     }
 }
