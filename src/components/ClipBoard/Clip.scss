@@ -1,0 +1,15 @@
+.clip{
+    &__tag{
+        width: 3rem;
+        height: 3rem;
+        background-image:url('../../assets/icons/clipboard.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: #f6e601;
+        border-radius: .5rem;
+        margin: 0;
+    }
+    &__small{
+        color: black;
+    }
+}

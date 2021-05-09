@@ -82,6 +82,7 @@ class Main extends Component {
                         count={this.state.movies.length}
                         sort={this.state.sort}
                         sortMovies={this.sortMovies}
+                        nominatedMovies={this.state.nominatedMovies}
                     />
                     <div className="main-grid__search">
                         <input 
@@ -102,7 +103,7 @@ class Main extends Component {
                         />
                     </div>
                     <div className="main-grid__nominations">
-                        <h2 className="main-grid__title"><span  className="main-grid__title-count">0</span> Nominations</h2>
+                        <h2 className="main-grid__title"><span  className="main-grid__title-count">{this.state.nominatedMovies.length}</span> Nominations</h2>
                         <Nomination
                             nominatedMovies={this.state.nominatedMovies}
                             removeFromNomination={this.removeFromNomination}
