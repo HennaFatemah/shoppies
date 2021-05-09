@@ -9,11 +9,13 @@ function App() {
     <BrowserRouter>
       <Header/>
       <Switch>
-        <Route exact path='/' component={Hero}  />
-        <Route path='/nomination' component={Main}  />
+        <Route exact path='/shoppies' component={Hero}  />
+        <Route path='/shoppies/nomination' component={Main}  />
       </Switch>
     </BrowserRouter>
   );
 }
+// https://hennafatemah.github.io/shoppies/
+// https://hennafatemah.github.io/shoppies/nomination
 
 export default App;
