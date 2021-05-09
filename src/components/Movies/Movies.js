@@ -12,15 +12,6 @@ class Movies extends Component {
         }
     }
 
-    handleShareSelect = (id) => {
-        console.log(id);
-        const currMovie = this.props.movies.find(movie => movie.imdbID === id);
-        this.setState({
-            selectedShare: currMovie,
-            share: currMovie
-        });
-    }
-
     handleMovieClose = () => {
         this.setState({
             selectedMovie: null
@@ -61,11 +52,11 @@ class Movies extends Component {
                                             Nominate
                                         </button>
                                     </div>
-                                    <button  onClick={() => this.handleMovieSelect(movie.imdbID)}>More Details</button>
+                                    <button className="movies__more-details"  onClick={() => this.handleMovieSelect(movie.imdbID)}> ... More Details ...</button>
                                     {this.state.selectedMovie && <MovieDetails
-                    movie={this.state.movie}
-                    onMovieClose={this.handleMovieClose}
-                />}
+                                        movie={this.state.movie}
+                                        onMovieClose={this.handleMovieClose}
+                                    />}
                                 </div>
                             </li>
                         )

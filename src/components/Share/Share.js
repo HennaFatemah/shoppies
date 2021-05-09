@@ -13,32 +13,25 @@ const Share = ( {share} ) => {
         <div className="social-icons">
             <FacebookShareButton
                 url={"https://www.kidobunny.com"}
-                quote={`I have nominated ${share} in the Shoppies nomination`}
+                quote={`I have nominated ${share} in The Shoppies nomination`}
                 hashtag="#TheShoppiesMovieAwardsForEntrepreneurs"
             >
-            <img className="size" src={Facebook} alt=""/>
+                <img className="size" src={Facebook} alt=""/>
             </FacebookShareButton>
             <TwitterShareButton
                 url={"https://www.kidobunny.com"}
-                title={`I have nominated ${share} in the Shoppies nomination`}
+                title={`I have nominated ${share} in The Shoppies nomination`}
                 hashtag="#TheShoppiesMovieAwardsForEntrepreneurs"
             >
-            <img className="size" src={Twitter} alt=""/>
+                <img className="size" src={Twitter} alt=""/>
             </TwitterShareButton>
             <WhatsappShareButton
                 url={"https://www.kidobunny.com"}
-                title={`I have nominated ${share} in the Shoppies nomination`}
+                title={`I have nominated ${share} in The Shoppies nomination`}
                 separator=":: "
             >
-            <img className="size" src={Whatsapp} alt=""/>
+                <img className="size" src={Whatsapp} alt=""/>
             </WhatsappShareButton>
-            <PinterestShareButton
-                url={"https://www.kidobunny.com"}
-                title={`I have nominated ${share} in the Shoppies nomination`}
-                separator=":: "
-            >
-            <img className="size" src={Pinterest} alt=""/>
-            </PinterestShareButton>
             <Clipboard/>
         </div>
     );
