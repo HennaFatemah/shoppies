@@ -48,7 +48,8 @@ class Movies extends Component {
                                         <p className="movies__year">Year: {movie.Year}</p>
                                         <button className="movies__nominate-btn" 
                                             onClick={() => this.props.addToNomination(movie)}
-                                            disabled={this.props.disableNomination.find(eachMovie => eachMovie.imdbID === movie.imdbID)}>
+                                            disabled={
+                                                this.props.disableNomination.find(eachMovie => eachMovie.imdbID === movie.imdbID)}>
                                             Nominate
                                         </button>
                                     </div>
