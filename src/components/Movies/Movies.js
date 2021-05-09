@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Movies.scss';
 import Poster from '../../assets/images/poster.jpeg';
-import Share from '../Share/Share';
+import MovieDetails from '../MovieDetails/MovieDetails'
 
 class Movies extends Component {
     constructor(){
@@ -10,6 +10,15 @@ class Movies extends Component {
             selectedMovie: null,
             movie:{},
         }
+    }
+
+    handleShareSelect = (id) => {
+        console.log(id);
+        const currMovie = this.props.movies.find(movie => movie.imdbID === id);
+        this.setState({
+            selectedShare: currMovie,
+            share: currMovie
+        });
     }
 
     handleMovieClose = () => {
@@ -39,8 +48,7 @@ class Movies extends Component {
                     {movies.map((movie, i) => {
                         return(
                             <li key={i} className="movies__list">
-                                <Share/>
-                                <div className="movies__card"  onMouseOver={() => this.handleMovieSelect(movie.imdbID)} onMouseLeave={this.onMovieClose}>
+                                <div className="movies__card">
                                     <div className="movies__connect">
                                         <div className="movies__pic-container">
                                             <img className="movies__pic" src={movie.Poster === "N/A" ? Poster: movie.Poster} alt={movie.Title}/>
@@ -55,16 +63,11 @@ class Movies extends Component {
                                             Nominate
                                         </button>
                                     </div>
-                                    {this.state.selectedMovie &&
-                                        <div className="movie-details__details">
-                                            <p className="movie-details__instructions">{this.state.movie.Actors}</p>
-                                            <p className="movie-details__instructions">{this.state.movie.Plot}</p>
-                                            <p className="movie-details__instructions">{this.state.movie.Rated}</p>
-                                            <p className="movie-details__instructions">{this.state.movie.Released}</p>
-                                            <p className="movie-details__instructions">{this.state.movie.Genre}</p>
-                                            <p className="movie-details__instructions">{this.state.movie.Director}</p>
-                                        </div>
-                                    }
+                                    <button  onClick={() => this.handleMovieSelect(movie.imdbID)}>More Details</button>
+                                    {this.state.selectedMovie && <MovieDetails
+                    movie={this.state.movie}
+                    onMovieClose={this.handleMovieClose}
+                />}
                                 </div>
                             </li>
                         )

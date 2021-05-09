@@ -103,6 +103,13 @@
         outline: none;
         opacity: 0.3;
     }
+    &__share{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        z-index: 30;
+    }
 }
 .movie-details {
     &__details{
@@ -111,10 +118,6 @@
         flex-wrap: wrap;
         margin: 0;
         padding: 0;
-        opacity: 0;
-        &:hover{
-            opacity: 1;
-        }
     }
     &__close{
         position: absolute;

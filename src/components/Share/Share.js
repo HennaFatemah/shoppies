@@ -1,52 +1,49 @@
 import React from 'react';
 import {FacebookShareButton, FacebookIcon} from "react-share";
-import {TwitterShareButton, TwitterIcon} from "react-share";
-import {WhatsappShareButton, WhatsappIcon} from "react-share";
-import {PinterestShareButton, PinterestIcon} from "react-share";
+import { TwitterShareButton, TwitterIcon, WhatsappShareButton, WhatsappIcon, PinterestShareButton, PinterestIcon } from "react-share";
 import Clipboard from '../ClipBoard/Clipboard';
+import Facebook from '../../assets/images/facebook.svg'
 import './Share.scss';
 
-const Share = () => {
+const Share = ( {share} ) => {
     return (
         <div className="social-icons">
             <FacebookShareButton
                 url={"https://www.kidobunny.com"}
-                quote={"Kido Bunny - Preschooler educational gaming hub"}
-                hashtag="#kidobunny"
+                quote={`I have nominated ${share.Title} in the Shoppies nomination`}
+                hashtag="#TheShoppiesMovieAwardsForEntrepreneurs"
             >
-                <FacebookIcon
-                    size={28}
-                    borderRadius={8}
-                />
+            <img className="size" src={Facebook} alt=""/>
             </FacebookShareButton>
             <TwitterShareButton
                 url={"https://www.kidobunny.com"}
-                title={"Kido Bunny - Preschooler educational gaming hub"}
-                hashtag="#kidobunny"
+                title={`I have nominated ${share.Title} in the Shoppies nomination`}
+                hashtag="#TheShoppiesMovieAwardsForEntrepreneurs"
             >
-                <TwitterIcon
-                    size={28}
-                    borderRadius={8}
-                />
+            <TwitterIcon
+                size={18}
+                borderRadius={4}
+            />
             </TwitterShareButton>
             <WhatsappShareButton
                 url={"https://www.kidobunny.com"}
+                title={`I have nominated ${share.Title} in the Shoppies nomination`}
                 separator=":: "
             >
-                <WhatsappIcon
-                    size={28}
-                    borderRadius={8}
-                />
+            <WhatsappIcon
+                size={18}
+                borderRadius={4}
+            />
             </WhatsappShareButton>
             <PinterestShareButton
                 url={"https://www.kidobunny.com"}
-                title={"Kido Bunny - Preschooler educational gaming hub"}
+                title={`I have nominated ${share.Title} in the Shoppies nomination`}
                 separator=":: "
             >
-                <PinterestIcon
-                    size={28}
-                    borderRadius={8}
-                />
+            <PinterestIcon
+                size={18}
+                borderRadius={4}
+            />
             </PinterestShareButton>
             <Clipboard/>
         </div>

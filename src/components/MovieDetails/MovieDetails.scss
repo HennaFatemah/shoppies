@@ -1,0 +1,100 @@
+.movie-details {
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    &__overlay {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        min-height: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+    }
+    &__content{
+        background-image: url('../../assets/images/main-bg.png');
+        background-position-y: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        //width: 90%;
+        height: 90vh;
+        background-color: white;
+        //box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.34);
+        border-radius: 10px;
+        padding: 2rem;
+        margin: 2rem 0;
+        //margin-top: -6rem;
+        z-index: 7;
+    }
+    &__details{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__close{
+        position: absolute;
+        background: none;
+        border: 0;
+        top: 1rem;
+        right: 1rem;
+        cursor: pointer;
+        font-size: 1.5rem;
+        &:active{
+            outline: none;
+        }
+    }
+    .test-thumb{
+        max-width: 70%;
+        margin-right: 2rem;
+    }
+
+    &__top{
+        margin-top: 1rem;
+        // width: 100%;
+        // height: 30%;
+        @media (min-width: 769px) {
+            height: 80%;
+        }
+        display: flex;
+    }
+    &__video--media{
+        height: 10vh;
+    }
+    &__instructions{
+        font-size: 13px;
+        font-weight: bold;
+        text-align: center;
+        color: #323648;
+        padding: 0.1rem;
+        padding-left: 3rem;
+    }
+    &__intro{
+        width:80vw;
+    }
+    &__subtitle{
+        text-transform: capitalize;
+        letter-spacing: 0.4rem;
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 1.5em;
+        text-align: center;
+        color: #323648;
+        padding: 0.1rem;
+        margin: 0.3rem 0;
+    }
+    &__nominate-btn{
+        padding: 1rem;
+        border: 0.1rem #c0c0c0 solid;
+        border-radius: 3px;
+        background-color: rgb(252, 212, 110);
+        cursor: pointer;
+        outline: none;
+        &:hover{
+            border: 0.1rem #80c0c0 solid;
+        }
+    }
+}
