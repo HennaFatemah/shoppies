@@ -1,21 +1,20 @@
 {
   "files": {
-    "main.css": "/shoppies/static/css/main.9f4e0238.chunk.css",
-    "main.js": "/shoppies/static/js/main.f7d1cc7d.chunk.js",
-    "main.js.map": "/shoppies/static/js/main.f7d1cc7d.chunk.js.map",
+    "main.css": "/shoppies/static/css/main.e14d09e3.chunk.css",
+    "main.js": "/shoppies/static/js/main.73180ff5.chunk.js",
+    "main.js.map": "/shoppies/static/js/main.73180ff5.chunk.js.map",
     "runtime-main.js": "/shoppies/static/js/runtime-main.a99e9ff6.js",
     "runtime-main.js.map": "/shoppies/static/js/runtime-main.a99e9ff6.js.map",
-    "static/js/2.282bd7b9.chunk.js": "/shoppies/static/js/2.282bd7b9.chunk.js",
-    "static/js/2.282bd7b9.chunk.js.map": "/shoppies/static/js/2.282bd7b9.chunk.js.map",
+    "static/js/2.9e861c49.chunk.js": "/shoppies/static/js/2.9e861c49.chunk.js",
+    "static/js/2.9e861c49.chunk.js.map": "/shoppies/static/js/2.9e861c49.chunk.js.map",
     "index.html": "/shoppies/index.html",
-    "static/css/main.9f4e0238.chunk.css.map": "/shoppies/static/css/main.9f4e0238.chunk.css.map",
-    "static/js/2.282bd7b9.chunk.js.LICENSE.txt": "/shoppies/static/js/2.282bd7b9.chunk.js.LICENSE.txt",
+    "static/css/main.e14d09e3.chunk.css.map": "/shoppies/static/css/main.e14d09e3.chunk.css.map",
+    "static/js/2.9e861c49.chunk.js.LICENSE.txt": "/shoppies/static/js/2.9e861c49.chunk.js.LICENSE.txt",
     "static/media/Clip.scss": "/shoppies/static/media/clipboard.41aecb33.svg",
     "static/media/Navigation.scss": "/shoppies/static/media/down-arrow.986f06a4.svg",
     "static/media/facebook.b759dd8f.svg": "/shoppies/static/media/facebook.b759dd8f.svg",
     "static/media/hero.647bc5f4.png": "/shoppies/static/media/hero.647bc5f4.png",
     "static/media/MovieDetails.scss": "/shoppies/static/media/main-bg.e279ee69.png",
-    "static/media/pinterest-square.7cb4bcf4.svg": "/shoppies/static/media/pinterest-square.7cb4bcf4.svg",
     "static/media/poster.8991af8c.jpeg": "/shoppies/static/media/poster.8991af8c.jpeg",
     "static/media/Main.scss": "/shoppies/static/media/shopify-sans-web-medium-regular.b5b032d8.woff",
     "static/media/shoppies-logo-small.fd608d40.svg": "/shoppies/static/media/shoppies-logo-small.fd608d40.svg",
@@ -25,8 +24,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.a99e9ff6.js",
-    "static/js/2.282bd7b9.chunk.js",
-    "static/css/main.9f4e0238.chunk.css",
-    "static/js/main.f7d1cc7d.chunk.js"
+    "static/js/2.9e861c49.chunk.js",
+    "static/css/main.e14d09e3.chunk.css",
+    "static/js/main.73180ff5.chunk.js"
   ]
 }
