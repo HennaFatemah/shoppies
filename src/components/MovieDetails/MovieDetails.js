@@ -6,7 +6,7 @@ const MovieDetails = ({ movie, onMovieClose }) => {
         <div className="movie-details">
             <div className="movie-details__overlay">
                 <div className="movie-details__content">
-                    <img className="movie-details__video--media" src={movie.Poster === "N/A" ? Poster: movie.Poster} alt='movie' />
+                    <img className="movie-details__pic" src={movie.Poster === "N/A" ? Poster: movie.Poster} alt='movie' />
                     <div className="movie-details__intro">
                         <h3 className="movie-details__subtitle">Title: {movie.Title}</h3>
                         <div className="movie-details__details">

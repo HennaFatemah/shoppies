@@ -16,5 +16,8 @@
         font-family: 'myriad';
         padding: 1rem 0 0.5rem 0;
         width: 15rem;
+        @media (max-width: 280px) {
+            width: 90vw;
+        }
     }
 }

@@ -4,15 +4,10 @@
     position: absolute;
     top: 15vh;
     background-color: map-get($color-background, hero-bg);
-    display: grid;
-    grid-template-areas: "main" "foot";
-    grid-template-rows: 75vh 10vh;
-    grid-template-columns: 1fr;
-    height: 100vh;
+    min-height: 100vw;
     width: 100vw;
     animation: appearance 2s linear;
     &__main{
-        grid-area: "main";
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -35,12 +30,12 @@
     }
     &__start-nominate{
         margin: 0;
-        padding: 1rem;
         text-align: center;
         text-decoration: none;
-        @include nominate-size;
-        width: 18.75rem;
         outline: none;
+        height: 4rem;
+        width: 18.75rem;
+        @include nominate-size;
         @include desktop{
             width: 14rem;
         }
@@ -52,6 +47,18 @@
         color: map-get($color-primary, global-white);
         &:hover{
             opacity: 90%;
+        }
+    }
+    &__nominate{
+        margin: 0;
+        outline: none;
+        color: map-get($color-primary, global-white);
+        text-decoration: none;
+        height: 10rem;
+        width: 18.75rem;
+        @include nominate-size;
+        @include desktop{
+            width: 14rem;
         }
     }
     &__hero{
@@ -75,13 +82,6 @@
             width: 30vw;
             height: 30vw;
         }
-        // @include desktop{
-        //     width: 20vw;
-        //     height: 20vw;
-        // }
-    }
-    &__foot{
-        background-color: map-get($color-primary, global-white);
     }
 }
 

@@ -54,15 +54,15 @@ class Movies extends Component {
                                         </button>
                                     </div>
                                     <button className="movies__more-details"  onClick={() => this.handleMovieSelect(movie.imdbID)}> ... More Details ...</button>
-                                    {this.state.selectedMovie && <MovieDetails
-                                        movie={this.state.movie}
-                                        onMovieClose={this.handleMovieClose}
-                                    />}
                                 </div>
                             </li>
                         )
                     })}
                 </ul>
+                {this.state.selectedMovie && <MovieDetails
+                    movie={this.state.movie}
+                    onMovieClose={this.handleMovieClose}
+                />}
             </>
         );
     }

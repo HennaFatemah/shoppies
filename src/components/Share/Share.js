@@ -1,11 +1,9 @@
 import React from 'react';
-import {FacebookShareButton, FacebookIcon} from "react-share";
-import { TwitterShareButton, TwitterIcon, WhatsappShareButton, WhatsappIcon, PinterestShareButton, PinterestIcon } from "react-share";
+import { FacebookShareButton, TwitterShareButton, WhatsappShareButton } from "react-share";
 import Clipboard from '../ClipBoard/Clipboard';
 import Facebook from '../../assets/images/facebook.svg';
 import Twitter from '../../assets/images/twitter-square.svg';
 import Whatsapp from '../../assets/images/whatsapp-square.svg';
-import Pinterest from '../../assets/images/pinterest-square.svg';
 import './Share.scss';
 
 const Share = ( {share} ) => {

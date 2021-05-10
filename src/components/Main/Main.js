@@ -19,7 +19,9 @@ class Main extends Component {
     removeFromNomination = (movie) => {
         const nominatedMovies = this.state.nominatedMovies.slice();
         this.setState({ 
-            nominatedMovies: nominatedMovies.filter(x => x.imdbID !== movie.imdbID)})
+            nominatedMovies: nominatedMovies.filter(x => x.imdbID !== movie.imdbID),
+            disableNominatedMovies: nominatedMovies.filter(x => x.imdbID !== movie.imdbID),
+        })
     }
 
     addToNomination = (movie) => {
