@@ -51,7 +51,6 @@ class Main extends Component {
         fetch(`https://www.omdbapi.com/?apikey=874163ff&s=${this.state.searchField}`)
         .then(response => response.json())
         .then(searchedMovies => {
-            console.log(searchedMovies);
             this.setState(searchedMovies.Response === "True" ? { movies: searchedMovies.Search }: null)
         })
     }
