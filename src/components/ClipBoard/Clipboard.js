@@ -3,7 +3,7 @@ import Clip from './Clip';
 const Clipboard = () => {
     return (
         <div>
-            <Clip link="https://www.kidobunny.com"/>
+            <Clip link="hennafatemah.github.io/shoppies"/>
         </div>
     );
 };

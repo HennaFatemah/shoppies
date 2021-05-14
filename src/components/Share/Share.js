@@ -10,21 +10,21 @@ const Share = ( {share} ) => {
     return (
         <div className="social-icons">
             <FacebookShareButton
-                url={"https://www.kidobunny.com"}
+                url={"hennafatemah.github.io/shoppies"}
                 quote={`I have nominated ${share} in The Shoppies nomination`}
                 hashtag="#TheShoppiesMovieAwardsForEntrepreneurs"
             >
                 <img className="size" src={Facebook} alt=""/>
             </FacebookShareButton>
             <TwitterShareButton
-                url={"https://www.kidobunny.com"}
+                url={"hennafatemah.github.io/shoppies"}
                 title={`I have nominated ${share} in The Shoppies nomination`}
                 hashtag="#TheShoppiesMovieAwardsForEntrepreneurs"
             >
                 <img className="size" src={Twitter} alt=""/>
             </TwitterShareButton>
             <WhatsappShareButton
-                url={"https://www.kidobunny.com"}
+                url={"hennafatemah.github.io/shoppies"}
                 title={`I have nominated ${share} in The Shoppies nomination`}
                 separator=":: "
             >
